@@ -1,0 +1,12 @@
+<div style="width:450px; height: 500px; border: solid;padding: 10px;">
+    <h2>This is Parent Component</h2>
+  
+    <input type="text" [(ngModel)]="firstName">
+<hr> <br><br>
+    <button style="background-color: bisque; border: none; padding: 10px; border-radius: 5px;" (click)="viewChild()">View Child Component</button>
+    <br>
+    <app-child *ngIf="isChild" [firstName]="firstName">
+        <h2 #parentContent>This is content from parent</h2>
+    </app-child>
+</div>
+
